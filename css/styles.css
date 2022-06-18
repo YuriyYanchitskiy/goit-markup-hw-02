@@ -1,321 +1,229 @@
-/*Студия*/
-body{
-    background-color: #FFFFFF;
-    font-family: 'Roboto';
+html{
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+:root {
+    --primary-text-color: #757575;
+    --title-text-color: #212121;
+    --accent-color1: #2196F3;
+    --accent-color2: #FFFFFF;
+    --background-color: #FFFFFF;
+    --other-background-color: #F5F4FA;
+    --background: #2F303A;
+    --blue-background: #2196F3;
+
 }
 /*основний колір фону #FFFFFF*/
 /*другорядний колір фону #F5F4FA*/
-/*1 колір тексту #212121*/
-/*2 колір тексту #757575*/
-/*3 колір тексту #FFFFFF*/
+/*1 колір тексту #757575*/
+/*2 колір тексту #212121*/
+/*3 колір тексту #2196F3*/
+/*4 колір тексту #FFFFFF*/
 
 /* WebStudio */
 
+body {
+    background-color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    color: #757575;
+}
+.link-header{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1230px;
+    height: 80px;
 
-.logo{
-    position: absolute;
-    width: 145px;
-    height: 31px;
-    left: 215px;
-    top: 24px;
-    font-style: normal;
+}
+.logo-header{
     font-weight: 700;
     font-size: 26px;
-    line-height: 31px;
+    line-height: 1,2;
     letter-spacing: 0.03em;
-    color: #212121;
+    color: var(--title-text-color);
     text-decoration: none;
-}
-.blue{
-    color: #2196F3;
+    font-family: 'Releway',sans-serif;
 }
 
-.list{
-    list-style: none;
-}
-.list-adress{
-    list-style: none;
-}
+.list,
+.list-adress,
 .lists{
     list-style: none;
 }
 
+
 /*посилання*/
-.studio:hover {
-    color: #2196F3;
-}
-.studio{
-    position: absolute;
-    width: 49px;
-    height: 16px;
-    left: 453px;
-    top: 32px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.02em;
-    color: #212121;
-    text-decoration: none;
-
-}
-.studio:focus{
-    color: #2196F3;
-}
-.portfolio:focus{
-    color: #2196F3;
-}
-.contacts:focus{
-    color: #2196F3;
-}
-.mail:focus{
-    color: #2196F3;
-}
-.tel:focus{
-    color: #2196F3;
-}
-.portfolio{
-    position: absolute;
-    width: 77px;
-    height: 16px;
-    left: 552px;
-    top: 32px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.02em;
-    color: #212121;
-    text-decoration: none;
-}
-.portfolio:hover{
-    color: #2196F3;
-}
-.contacts:hover{
-    color: #2196F3;
-}
+.studio,
+.portfolio,
 .contacts{
-    position: absolute;
-    width: 68px;
-    height: 16px;
-    left: 679px;
-    top: 32px;
-    font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 1,1;
     letter-spacing: 0.02em;
-    color: #212121;
+    color: var(--title-text-color);
     text-decoration: none;
+    display: inline-block;
+    /* margin: right 50px; */
+}
+.list .studio.current,
+.list .portfolio.current{
+    color: var(--accent-color1)
 }
 
-.mail:hover {
-    color: #2196F3;
-}
-.mail{
-    position: absolute;
-    width: 135px;
-    height: 16px;
-    left: 1078px;
-    top: 32px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.02em;
-    color: #757575;
-    text-decoration: none;
-}
 
-.tel:hover {
-    color: #2196F3;
+.blue,
+.studio:focus,
+.portfolio:focus,
+.contacts:focus,
+.mail:focus,
+.tel:focus,
+.studio:hover,
+.portfolio:hover,
+.contacts:hover,
+.mail:hover,
+.tel:hover{
+    color: var(--accent-color1);
 }
+.mail,
 .tel{
-    position: absolute;
-    width: 122px;
-    height: 16px;
-    left: 1263px;
-    top: 32px;
-    font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 1,1;
     letter-spacing: 0.02em;
-    color: #757575;
+    color: var(--primary-text-color);
     text-decoration: none;
 }
+
 /*main*/
-.section1{
-    position: absolute;
+.hero{
     width: 1600px;
     height: 600px;
     left: 0px;
     top: 80px;
-    background: #2F303A;
+
+    background: var(--background);
 }
 .title{
-    position: absolute;
-    width: 696px;
-    height: 120px;
-    left: 452px;
-    top: 200px;
-    font-style: normal;
     font-weight: 900;
     font-size: 44px;
-    line-height: 60px;
-    align-items: center;
+    line-height: 1,4;
+
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: var(--accent-color2);
 }
 .button{
-    position: absolute;
-    width: 200px;
-    height: 50px;
-    left: 700px;
-    top: 400px;
-    background: #2196F3;
+    color: var(--title-text-color);
+    background-color: var(--background-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
     border-radius: 4px;
     border: none;
-    color: #FFFFFF;
-    font-style: normal;
     font-weight: 700;
     font-size: 16px;
-    line-height: 30px;
+    line-height: 1,9;
     cursor: pointer
 }
-.title1{
-    position: absolute;
-    width: 270px;
-    height: 16px;
-    left: 215px;
-    top: 774px;
-    font-style: normal;
+.button.service{
+    background: var(--blue-background);
+    color: var(--accent-color2);
+    border-color: transparent;
+    display: inline-block;
+    text-transform: none;
+    padding: 10px 32px;
+    text-decoration: none;
+    border-radius: none;
+}
+.lists{
+    width: 1230px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.title-attention{
     font-weight: 700;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 1,7;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: #212121;
+    color: var(--title-text-color);
 }
-.paragraph1{
-    position: absolute;
-    width: 270px;
-    height: 75px;
-    left: 215px;
-    top: 800px;
+.paragraph-ideological{
     font-size: 14px;
-    line-height: 24px;
+    line-height: 1,7;
     letter-spacing: 0.03em;
-    color: #757575;
+    color: var(--primary-text-color);
 }
-.title2{
-    position: absolute;
-    width: 270px;
-    height: 16px;
-    left: 515px;
-    top: 774px;
-    font-style: normal;
+.title-punctuality{
     font-weight: 700;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 1,1;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: #212121;
+    color: var(--title-text-color);
 }
-.paragraph2{
-    position: absolute;
-    width: 270px;
-    height: 75px;
-    left: 515px;
-    top: 800px;
+.paragraph-a-task{
     font-size: 14px;
-    line-height: 24px;
+    line-height: 1,7;
     letter-spacing: 0.03em;
-    color: #757575;
+    color: var(--primary-text-color);
 }
-.title3{
-    position: absolute;
-    width: 270px;
-    height: 16px;
-    left: 815px;
-    top: 774px;
-    font-style: normal;
+.title-planning{
     font-weight: 700;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 1,1;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: #212121;
+    color: var(--title-text-color);
 }
-.paragraph3{
-    position: absolute;
-    width: 270px;
-    height: 75px;
-    left: 815px;
-    top: 800px;
+.paragraph-equal{
     font-size: 14px;
-    line-height: 24px;
+    line-height: 1,7;
     letter-spacing: 0.03em;
-    color: #757575;
+    color: var(--primary-text-color);
 }
-.title4{
-    position: absolute;
-    width: 270px;
-    height: 16px;
-    left: 1115px;
-    top: 774px;
-    font-style: normal;
+.title-modern{
     font-weight: 700;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 1,1;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: #212121;
+    color: var(--title-text-color);
 }
-.paragraph4{
-    position: absolute;
-    width: 270px;
-    height: 75px;
-    left: 1115px;
-    top: 800px;
+.paragraph-significance{
     font-size: 14px;
-    line-height: 24px;
+    line-height: 1,7;
     letter-spacing: 0.03em;
-    color: #757575;
+    color: var(--primary-text-color);
 }
-.title5{
-    position: absolute;
-    width: 376px;
-    height: 42px;
-    left: 612px;
-    top: 969px;
-    font-style: normal;
+.title-doing{
     font-weight: 700;
     font-size: 36px;
-    line-height: 42px;
+    line-height: 1,2;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #212121;
+    color: var(--title-text-color);
 }
 .img1{
-    position: absolute;
     width: 370px;
     height: 294px;
     left: 215px;
     top: 1061px;
 }
+.box{
+    width: 370px;
+    outline: 2px solid tomato;
+}
 .img2{
-    position: absolute;
     width: 370px;
     height: 294px;
     left: 615px;
     top: 1061px;
 }
 .img3{
-    position: absolute;
     width: 370px;
     height: 294px;
     left: 1015px;
@@ -323,350 +231,194 @@ body{
 }
 
 .ourteam{
-        width: 1600px;
-        height: 648px;
-        left: 0px;
-        top: 1449px;
-        background: #F5F4FA;
+    background: var(--other-background-color);
 }
 
-.title6{
-    position: absolute;
-    width: 264px;
-    height: 42px;
-    left: 668px;
-    top: 1543px;
-    font-style: normal;
+.title-team{
     font-weight: 700;
     font-size: 36px;
-    line-height: 42px;
+    line-height: 1,2;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #212121;
+    color: var(--title-text-color);
 }
 
-.team1{
-    position: absolute;
-    width: 270px;
-    height: 368px;
-    left: 215px;
-    top: 1635px;
-    background: #FFFFFF;
+.igor{
+    background: var(--background-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
-.name1{
-text-align: center;
+.name,
+.position{
+    text-align: center;
 }
-.team2{
-    position: absolute;
+.igor.box,
+.olga.box,
+.nicholas.box,
+.michael.box{
     width: 270px;
-    height: 368px;
-    left: 515px;
-    top: 1635px;
-    background: #FFFFFF;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
 }
-.team3{
-    position: absolute;
-    width: 270px;
-    height: 368px;
-    left: 815px;
-    top: 1635px;
-    background: #FFFFFF;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
-}
-.team4{
-    position: absolute;
-    width: 270px;
-    height: 368px;
-    left: 1115px;
-    top: 1635px;
-    background: #FFFFFF;
+.olga{
+    background: var(--background-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
 
-.footer{
-    position: absolute;
-    width: 1600px;
-    height: 252px;
-    left: 0px;
-    top: 2097px;
-    background: #2F303A;
+.nicholas{
+    background: var(--background-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
-.logo1 {
-position: absolute;
-    width: 145px;
-    height: 31px;
-    left: 215px;
-    top: 60px;
-    font-family: unset;
-    font-style: normal;
+
+.michael{
+    background: var(--background-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.igor .name,
+.olga .name,
+.nicholas .name,
+.michael .name{
+    color: var(--title-text-color);
+}
+
+.footer-studio{
+    background: var(--background);
+}
+.logo-footer{
     font-weight: 700;
     font-size: 26px;
-    line-height: 31px;
+    line-height: 1,2;
     letter-spacing: 0.03em;
     text-decoration: none;
+    font-family: 'Releway', sans-serif;
+    width: 1230px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 .white{
-    color: #FFFFFF;
+    color: var(--accent-color2);
 }
 .liaddress{
-    position: absolute;
-    width: 231px;
-    height: 21px;
-    left: 215px;
-    top: 111px;
-    font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 1,7;
     letter-spacing: 0.03em;
     text-decoration: none;
-    color: #FFFFFF;
+    color: var(--accent-color2);
 }
-.liaddress:hover {
-    color: #2196F3;
-}
-.liaddress:focus {
-    color: #2196F3;
-}
-.limail{
-    position: absolute;
-    width: 231px;
-    height: 21px;
-    left: 215px;
-    top: 141px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 0.03em;
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.6);
-}
-.limail:hover {
-    color: #2196F3;
-}
-.limail:focus {
-    color: #2196F3;
-}
-.litel{
-    position: absolute;
-    width: 231px;
-    height: 21px;
-    left: 215px;
-    top: 171px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    text-decoration: none;
-    letter-spacing: 0.03em;
-    color: rgba(255, 255, 255, 0.6);
-}
-.litel:hover {
-    color: #2196F3;
-}
+.liaddress:hover,
+.liaddress:focus,
+.limail:hover,
+.limail:focus,
+.litel:hover,
 .litel:focus{
-    color: #2196F3;
+    color: var(--accent-color1);
 }
 
+.limail{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1,7;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+}
 
+.litel{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1,7;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
 
+.address{
+    font-style: normal
+}
+
+/*////////////////////////////////////////*/
 
 /*Портфоліо*/
 
-.button2{
-    list-style: none;
-}
+.buttons-portfolio,
 .icon{
     list-style: none;
 }
 
-.header-button1{
-    position: absolute;
-    width: 73px;
-    height: 38px;
-    left: 495px;
-    top: 174px;
+.button-all,
+.button-web,
+.button-applications,
+.button-design,
+.button-marketing{
     border: none;
-    background: #F5F4FA;
-    cursor: pointer
+    background: var(--other-background-color);
+    cursor: pointer;
+    color: var(--title-text-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1,6;
+    letter-spacing: 0.03em;
+
+    display: inline-block;
+    text-transform: none;
+    padding: 6px 22px;
+    text-decoration: none;
+    border-radius: none;
 }
-.header-button1:hover,
-.header-button1:focus{
-    background-color:#2196F3;
+.button-all:hover,
+.button-all:focus,
+.button-web:hover,
+.button-web:focus,
+.button-applications:hover,
+.button-applications:focus,
+.button-design:hover,
+.button-design:focus,
+.button-marketing:hover,
+.button-marketing:focus{
+    background-color: var(--blue-background);
     border-color: transparent;
-    color: #FFFFFF;
+    color: var(--accent-color2);
 }
 
-.header-button2{
-    position: absolute;
-    width: 128px;
-    height: 38px;
-    left: 576px;
-    top: 174px;
-    border: none; 
-    background: #F5F4FA;
-    cursor: pointer
+.techno,
+.poster,
+.seafood,
+.prime,
+.boxes,
+.inspiration,
+.edition,
+.lab,
+.business{
+    box-sizing: border-box;
+    background: var(--background-color);
+    border: 1px solid #EEEEEE;
 }
-.header-button2:hover,
-.header-button2:focus{
-    background-color: #2196F3;
-    border-color: transparent;
-    color: #FFFFFF;
+.techno-title,
+.poster-title,
+.seafood-title,
+.prime-title,
+.boxes-title,
+.inspiration-title,
+.edition-title,
+.lab-title,
+.business-title{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--title-text-color);
+}
+.techno-text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1,9;
+    letter-spacing: 0.03em;
+    color: var(--primary-text-color);
 }
 
-.header-button3{
-    position: absolute;
-    width: 145px;
-    height: 38px;
-    left: 712px;
-    top: 174px;
-    border: none;
-    background: #F5F4FA;
-    cursor: pointer
-}
-.header-button3:hover,
-.header-button3:focus {
-    background-color: #2196F3;
-    border-color: transparent;
-    color: #FFFFFF;
-}
-
-.header-button4{
-    position: absolute;
-    width: 103px;
-    height: 38px;
-    left: 865px;
-    top: 174px;
-    border: none;
-    background: #F5F4FA;
-    cursor: pointer
-}
-.header-button4:hover,
-.header-button4:focus {
-    background-color: #2196F3;
-    border-color: transparent;
-    color: #FFFFFF;
-}
-
-.header-button5{
-    position: absolute;
-    width: 130px;
-    height: 38px;
-    left: 976px;
-    top: 174px;
-    border: none;
-    background: #F5F4FA;
-    cursor: pointer
-}
-.header-button5:hover,
-.header-button5:focus {
-    background-color: #2196F3;
-    border-color: transparent;
-    color: #FFFFFF;
-}
-
-.img-1{
-    box-sizing: border-box;
-    position: absolute;
-    width: 370px;
-    height: 404px;
-    left: 215px;
-    top: 262px;
-    background: #FFFFFF;
-    border: 1px solid #EEEEEE;
-}
-.img-2{
-    box-sizing: border-box;
-    position: absolute;
-    width: 370px;
-    height: 404px;
-    left: 615px;
-    top: 262px;
-    background: #FFFFFF;
-    border: 1px solid #EEEEEE;
-}
-.img-3{
-    box-sizing: border-box;
-    position: absolute;
-    width: 370px;
-    height: 404px;
-    left: 1015px;
-    top: 262px;
-    background: #FFFFFF;
-    border: 1px solid #EEEEEE;
-}
-.img-4{
-    box-sizing: border-box;
-    position: absolute;
-    width: 370px;
-    height: 404px;
-    left: 215px;
-    top: 696px;
-    background: #FFFFFF;
-    border: 1px solid #EEEEEE;
-}
-.img-5{
-    box-sizing: border-box;
-    position: absolute;
-    width: 370px;
-    height: 404px;
-    left: 615px;
-    top: 696px;
-    background: #FFFFFF;
-    border: 1px solid #EEEEEE;
-}
-.img-6 {
-    box-sizing: border-box;
-    position: absolute;
-    width: 370px;
-    height: 404px;
-    left: 1015px;
-    top: 696px;
-    background: #FFFFFF;
-    border: 1px solid #EEEEEE;
-}
-.img-7 {
-    box-sizing: border-box;
-    position: absolute;
-    width: 370px;
-    height: 404px;
-    left: 215px;
-    top: 1130px;
-    background: #FFFFFF;
-    border: 1px solid #EEEEEE;
-}
-.img-8 {
-    box-sizing: border-box;
-    position: absolute;
-    width: 370px;
-    height: 404px;
-    left: 615px;
-    top: 1130px;
-    background: #FFFFFF;
-    border: 1px solid #EEEEEE;
-}
-.img-9 {
-    box-sizing: border-box;
-    position: absolute;
-    width: 370px;
-    height: 404px;
-    left: 1015px;
-    top: 1130px;
-    background: #FFFFFF;
-    border: 1px solid #EEEEEE;
-}
-.footer2{
-    position: absolute;
-    width: 1600px;
-    height: 252px;
-    left: 0px;
-    top: 1628px;
-    background: #2F303A;
+.footer-portfolio{
+    background: var(--background);
 }
