@@ -31,13 +31,6 @@ body {
     font-family: 'Roboto', sans-serif;
     color: #757575;
 }
-.link-header{
-    margin-left: auto;
-    margin-right: auto;
-    width: 1230px;
-    height: 80px;
-
-}
 .logo-header{
     font-weight: 700;
     font-size: 26px;
