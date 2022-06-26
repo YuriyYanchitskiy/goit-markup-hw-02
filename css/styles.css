@@ -1,11 +1,11 @@
-html{
+/* html{
     box-sizing: border-box;
 }
 *,
 *::before,
 *::after{
     box-sizing: inherit;
-}
+} */
 :root {
     --primary-text-color: #757575;
     --title-text-color: #212121;
@@ -15,6 +15,8 @@ html{
     --other-background-color: #F5F4FA;
     --background: #2F303A;
     --blue-background: #2196F3;
+    --items: 3;/* кількість карток в рядку */
+    --indent: 30px;/* відступи між картками */
 
 }
 /*основний колір фону #FFFFFF*/
@@ -26,11 +28,23 @@ html{
 
 /* WebStudio */
 
-body {
+body{
+    margin: 0px;
     background-color: #FFFFFF;
     font-family: 'Roboto', sans-serif;
     color: #757575;
 }
+
+.container{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    /* padding-left: 15px;
+    padding-right: 15px; */
+    outline: 2px solid cyan;
+}
+ 
+/* Логотип хедера */
 .logo-header{
     font-weight: 700;
     font-size: 26px;
@@ -39,14 +53,99 @@ body {
     color: var(--title-text-color);
     text-decoration: none;
     font-family: 'Raleway', sans-serif;
+    /* display: inline-block;
+    margin: 0px; */
+    padding-left: 0;
 }
+/* .container-nav .logo-header{
+    padding: 0;
+} */
+.container.header-main{
+    padding-left: 0px;
+    padding-right: 0;
+}
+/* Посилання */
+
+
+/* Сіра лінія в хедері */
+.header{
+    border: 1px solid #ECECEC
+}
+
+
+/* Прибирає крапки в списках */
+.list,
+.lists-a,
+.lists-b,
+.lists-c,
+.lists-d{
+    list-style: none;
+    padding-left: 0;
+    display: block;
+}
+
+.list-item:not(:last-child) {
+    margin-bottom: 12px;
+}
+.list-item:not(:last-child) {
+    margin-bottom: 12px;
+}
+.lists-a,
+.lists-b,
+.lists-c{
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.list-adress{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+
 
 .list,
-.list-adress,
-.lists{
-    list-style: none;
+.list-adress{
+    display: flex;
+}
+ul.list{
+    margin: 0px 0px 0px 93px;
+    padding: 0;
+}
+.container-div{
+    margin-left: auto;
 }
 
+.header-main,
+.container-nav{
+    display: flex;
+    align-items: center;
+}
+
+.list li:not(:last-child){
+    margin-right: 50px;
+}
+
+.list-adress li:not(:last-child){
+    margin-right: 30px;
+}
+.container-nav .studio,
+.container-nav .portfolio,
+.container-nav .contacts,
+.container-div .mail,
+.container-div .tel{
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+.container hero{
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /*посилання*/
 .studio,
@@ -59,7 +158,6 @@ body {
     color: var(--title-text-color);
     text-decoration: none;
     display: inline-block;
-    /* margin: right 50px; */
 }
 .list .studio.current,
 .list .portfolio.current{
@@ -88,27 +186,41 @@ body {
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
     text-decoration: none;
+    display: inline-block;
 }
 
 /*main*/
 .hero{
-    width: 1600px;
+    width: 1602px;
     height: 600px;
     left: 0px;
     top: 80px;
-
+    text-align: center;
     background: var(--background);
+    /* margin-left: auto;
+    margin-right: auto; */
+    padding: 0;
+    
+    
 }
 .title{
     font-weight: 900;
     font-size: 44px;
     line-height: 1.4;
-
-    text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--accent-color2);
+    display: inline-block;
+    
+    margin-top: 0px;
+    margin-bottom: 30px;
+    display: flex;
+    width: 696px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 200px;
 }
+
 .button{
     color: var(--title-text-color);
     background-color: var(--background-color);
@@ -119,7 +231,9 @@ body {
     font-weight: 700;
     font-size: 16px;
     line-height: 1.9;
-    cursor: pointer
+    cursor: pointer;
+    display: flex;
+
 }
 .button.service{
     background: var(--blue-background);
@@ -129,69 +243,52 @@ body {
     text-transform: none;
     padding: 10px 32px;
     text-decoration: none;
-    border-radius: none;
+    border-radius: 4px;
 }
-.lists{
-    width: 1230px;
-    margin-left: 30px;
-    margin-right: 30px;
+
+.img1.box,
+.img2.box,
+.img3.box{
+    display: inline-block;
 }
-.title-attention{
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.7;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--title-text-color);
+.description {
+    padding-top: 94px;
+    align-items: center;
+    display: flex;
 }
-.paragraph-ideological{
-    font-size: 14px;
-    line-height: 1.7;
-    letter-spacing: 0.03em;
-    color: var(--primary-text-color);
-}
-.title-punctuality{
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.1;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--title-text-color);
-}
-.paragraph-a-task{
-    font-size: 14px;
-    line-height: 1.7;
-    letter-spacing: 0.03em;
-    color: var(--primary-text-color);
-}
-.title-planning{
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.1;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--title-text-color);
-}
-.paragraph-equal{
-    font-size: 14px;
-    line-height: 1.7;
-    letter-spacing: 0.03em;
-    color: var(--primary-text-color);
-}
+
+.title-attention,
+.title-punctuality,
+.title-planning,
 .title-modern{
     font-weight: 700;
     font-size: 14px;
-    line-height: 1.1;
+    line-height: 1.7;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--title-text-color);
+    margin-bottom: 10px;
+    margin-top: 30px;
+    width: 270px;
 }
-.paragraph-significance{
+.paragraph-ideological,
+.paragraph-a-task,
+.paragraph-equal,
+.paragraph-significance {
+    font-weight: 400;
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 270px;
 }
+.doing{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
 .title-doing{
     font-weight: 700;
     font-size: 36px;
@@ -199,32 +296,19 @@ body {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--title-text-color);
+    margin-bottom: 50px;
+    margin-top: 0;
 }
-.img1{
-    width: 370px;
-    height: 294px;
-    left: 215px;
-    top: 1061px;
-}
+
 .box{
-    width: 370px;
     outline: 2px solid tomato;
-}
-.img2{
-    width: 370px;
-    height: 294px;
-    left: 615px;
-    top: 1061px;
-}
-.img3{
-    width: 370px;
-    height: 294px;
-    left: 1015px;
-    top: 1061px;
 }
 
 .ourteam{
     background: var(--other-background-color);
+    padding-top: 94px;
+    padding-bottom: 94px;
+   
 }
 
 .title-team{
@@ -234,6 +318,8 @@ body {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--title-text-color);
+    margin-top: 0px;
+    margin-bottom: 50px;
 }
 
 .igor,
@@ -252,6 +338,15 @@ body {
     text-align: center;
     letter-spacing: 0.03em;
 }
+.name{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.position{
+    margin-top: 0px;
+    margin-bottom: 16px;
+}
+
 .igor.box,
 .olga.box,
 .nicholas.box,
@@ -265,9 +360,36 @@ body {
 .michael .name{
     color: var(--title-text-color);
 }
+.lists-c{
+    margin-top: 0px;
+}
 
-.footer-studio{
+.lists-b{
+    margin-top: 0px;
+    margin-bottom: 0;
+
+}
+.lists-d:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.footer{
+    width: 1602px;
+    height: 252px;
     background: var(--background);
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+}
+
+.container.footer{
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: flex-end; */
+    padding-top: 60px;
+    padding-bottom: 60px;
+    
 }
 .logo-footer{
     font-weight: 700;
@@ -276,10 +398,25 @@ body {
     letter-spacing: 0.03em;
     text-decoration: none;
     font-family: 'Raleway', sans-serif;
-    width: 1230px;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 201px;
+    /* padding-top: 60px; */
+    margin-bottom: 20px;
+    display: flex;
+    display: inline-block;
 }
+
+.lists-d{
+    margin-left: 201px;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column-reverse;
+   
+}
+/* .liaddress,
+.limail{
+    margin-bottom: 9px;
+} */
 .white{
     color: var(--accent-color2);
 }
@@ -318,6 +455,9 @@ body {
     color: rgba(255, 255, 255, 0.6);
 }
 
+    /* margin-top: 0px;
+} */
+
 .address{
     font-style: normal
 }
@@ -329,7 +469,37 @@ body {
 .buttons-portfolio,
 .icon{
     list-style: none;
+    display: flex;  
 }
+.icon {
+    
+    flex-wrap: wrap;
+    margin: calc(-1 * var(--indent) / 2);
+    margin-bottom: 0px;
+    margin-top: 50px;
+    padding-left: 0;
+}
+.icon .img {
+    display: block;
+}
+.buttons-portfolio{
+    margin: 0px;
+    padding-left: 0;
+    justify-content: center;
+}
+.buttons-portfolio .item:not(:last-child){
+    margin-right: 8px;
+}
+/* .botton-all{
+    margin-right: 8px;
+} */
+    
+.options{
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+}
+
 
 .button-all,
 .button-web,
@@ -349,7 +519,7 @@ body {
     text-transform: none;
     padding: 6px 22px;
     text-decoration: none;
-    border-radius: none;
+    border-radius: 4px;
 }
 .button-all:hover,
 .button-all:focus,
@@ -375,7 +545,7 @@ body {
 .edition,
 .lab,
 .business{
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     background: var(--background-color);
     border: 1px solid #EEEEEE;
 }
@@ -390,18 +560,73 @@ body {
 .business-title{
     font-weight: 700;
     font-size: 18px;
-    line-height: 2;
+    line-height: 1.9;
     letter-spacing: 0.06em;
     color: var(--title-text-color);
+    margin: 20px 24px 4px 24px; 
 }
-.techno-text{
+.techno-text,
+.poster-text,
+.seafood-text,
+.prime-text,
+.boxes-text,
+.inspiration-text,
+.edition-text,
+.lab-text,
+.business-text{
     font-weight: 400;
     font-size: 16px;
     line-height: 1.9;
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
+    margin: 0px 24px 4px 24px;
+}
+/* ширина ліжок */
+.techno.box,
+.poster.box,
+.seafood.box,
+.prime.box,
+.boxes.box,
+.inspiration.box,
+.edition.box,
+.lab.box,
+.business.box{
+    width: 370px;
 }
 
-.footer-portfolio{
-    background: var(--background);
+.techno {
+    flex-basis: calc((100% - var(--indent) * var(--items)) / var(--items));
+    margin: calc(var(--indent) / 2);
+}
+.poster{flex-basis: calc((100% - var(--indent) * var(--items)) / var(--items));
+    margin: calc(var(--indent) / 2);
+
+}
+.seafood{flex-basis: calc((100% - var(--indent) * var(--items)) / var(--items));
+    margin: calc(var(--indent) / 2);
+
+}
+.prime{flex-basis: calc((100% - var(--indent) * var(--items)) / var(--items));
+    margin: calc(var(--indent) / 2);
+
+}
+.boxes{flex-basis: calc((100% - var(--indent) * var(--items)) / var(--items));
+    margin: calc(var(--indent) / 2);
+
+}
+.inspiration{flex-basis: calc((100% - var(--indent) * var(--items)) / var(--items));
+    margin: calc(var(--indent) / 2);
+
+}
+.edition{flex-basis: calc((100% - var(--indent) * var(--items)) / var(--items));
+    margin: calc(var(--indent) / 2);
+
+}
+.lab{flex-basis: calc((100% - var(--indent) * var(--items)) / var(--items));
+    margin: calc(var(--indent) / 2);
+
+}
+.business{flex-basis: calc((100% - var(--indent) * var(--items)) / var(--items));
+    margin: calc(var(--indent) / 2);
+
 }
